@@ -114,6 +114,33 @@ return [
             // 'trust_server_certificate' => env('DB_TRUST_SERVER_CERTIFICATE', 'false'),
         ],
 
+        /*
+        |--------------------------------------------------------------------------
+        | Company Portal SQL Server
+        |--------------------------------------------------------------------------
+        |
+        | Connection used to read user roles / auth metadata from the
+        | CompanyPortal_DEV database.
+        |
+        */
+        'company_portal' => [
+            'driver' => 'sqlsrv',
+            'host' => env('COMPANY_DB_HOST', 'Zreekx\\SQLEXPRESS'),
+            'database' => env('COMPANY_DB_DATABASE', 'CompanyPortalData_DEV'),
+            'username' => env('COMPANY_DB_USERNAME', ''),
+            'password' => env('COMPANY_DB_PASSWORD', ''),
+            'prefix' => '',
+        ],
+
+        'gocorps' => [
+            'driver' => 'sqlsrv',
+            'host' => env('GOCORPS_DB_HOST', 'Zreekx\\SQLEXPRESS'),
+            'database' => env('GOCORPS_DB_DATABASE', 'GoCorps_DEV'),
+            'username' => env('GOCORPS_DB_USERNAME', ''),
+            'password' => env('GOCORPS_DB_PASSWORD', ''),
+            'prefix' => '',
+        ],
+
     ],
 
     /*
